@@ -1,0 +1,30 @@
+{
+  "name": "dds-secure-communication-passive-recorder",
+  "version": "1.0.0",
+  "description": "DDS Secure Communication Passive Recorder is a tool for recording and analyzing all DDS traffic on your network interface.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Idan-Neeman/DDS-Secure-Communication-Passive-Recorder.git"
+  },
+  "keywords": [
+    "DDS-Passive-Recorder",
+    "DDS-Recorder"
+  ],
+  "author": "Idan Neeman (LiveNet.co.il)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Idan-Neeman/DDS-Secure-Communication-Passive-Recorder/issues"
+  },
+  "homepage": "https://github.com/Idan-Neeman/DDS-Secure-Communication-Passive-Recorder#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "cap": "^0.2.1"
+  }
+}
