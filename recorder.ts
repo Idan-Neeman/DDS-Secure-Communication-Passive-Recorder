@@ -1,4 +1,6 @@
-import { Cap, decoders } from 'cap';
+import { Cap } from 'cap';
+import { PROTOCOL, decoders } from '@livedds/decoders'; // Private repo
+import DataStorage from 'dataStorage.ts';
 
 class Recorder {
     private capture:Cap;
@@ -28,6 +30,13 @@ class Recorder {
 
     private packetHandler(nbytes: number, trunc: boolean): void{
         console.log('packet: length ' + nbytes + ' bytes, truncated? ' + (trunc ? 'yes' : 'no'));
-        //TODO - Adding a custom RTPS parsing function in decoders (of cap) or create another independent npm package
+        let ret!:any;
+        if (this.linkType === 'ETHERNET') {
+            ret = decoders.Ethernet(this.buffer);
+            let data = decoders.RTPS(this.buffer, ret.offset);
+            DataStorage.dataArrived(data);
+        }
+        else
+            console.log('Unsupported Ethertype: ' + PROTOCOL.ETHERNET[ret.info.type]);
     }
 }

@@ -2,6 +2,7 @@
 # DDS Secure Communication Passive Recorder
 
 DDS Secure Communication Passive Recorder is a tool for recording and analyzing all DDS traffic on your network interface. The tool listens to the network, does not contain participants or entities in DDS, thus ensuring that its use does not change behavior in the existing system.
+**The project is under development. It has not yet been decided whether the project will be fully open source. (Last update 04/12/2022)**
 
 ## Secure Communication
 
